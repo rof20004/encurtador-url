@@ -1,0 +1,9 @@
+server:
+  protocol: http
+  host: localhost
+  port: 3000
+
+db:
+  type: sqlite
+  port: 5432
+  database: encurtador_url.db
