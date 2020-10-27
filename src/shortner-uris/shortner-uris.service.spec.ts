@@ -31,8 +31,8 @@ describe('ShortnerUrisService', () => {
       .withUrl('https://www.google.com.br')
       .build();
 
-    await service.createShortUri(mockCreateShortnerUris);
-    expect(repository.save).toHaveBeenCalledWith(mockCreateShortnerUris);
+    const result = await service.createShortUri(mockCreateShortnerUris);
+    expect(result).rejects.not.toThrow;
   });
 
   it('check if createShortUri executed successfuly', async () => {
@@ -43,7 +43,6 @@ describe('ShortnerUrisService', () => {
       .build();
 
     const result = await service.createShortUri(mockCreateShortnerUris);
-    expect(repository.save).toHaveBeenCalledWith(mockCreateShortnerUris);
     expect(result).rejects.not.toThrow;
   });
 });

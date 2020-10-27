@@ -36,7 +36,7 @@ describe('ShortnerUrisController', () => {
     it('expects to return 201 for create short uri because url is defined', async () => {
         await request(app.getHttpServer())
             .post('/api/v1/shortner-uris')
-            .send({ url: 'something' })
+            .send({ url: 'https://www.google.com.br' })
             .expect(201);
     });
 });
