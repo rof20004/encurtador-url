@@ -39,4 +39,11 @@ describe('ShortnerUrisController', () => {
             .send({ url: 'https://www.google.com.br' })
             .expect(201);
     });
+
+    it('expects to return 404 for redirect short url when not found', async () => {
+        await request(app.getHttpServer())
+            .get('/')
+            .send({ shortUri: 'rewrruhu1huhue' })
+            .expect(404);
+    });
 });
