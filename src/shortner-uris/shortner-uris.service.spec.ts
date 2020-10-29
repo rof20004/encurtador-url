@@ -24,17 +24,6 @@ describe('ShortnerUrisService', () => {
     expect(service.createShortUri).toBeDefined();
   });
 
-  it('validate createShortUri parameters', async () => {
-    expect(repository.save).not.toHaveBeenCalled();
-
-    const mockCreateShortnerUris = new CreateShortnerUrisDtoBuilder()
-      .withUrl('https://www.google.com.br')
-      .build();
-
-    const result = await service.createShortUri(mockCreateShortnerUris);
-    expect(result).rejects.not.toThrow;
-  });
-
   it('check if createShortUri executed successfuly', async () => {
     expect(repository.save).not.toHaveBeenCalled();
 
@@ -43,6 +32,8 @@ describe('ShortnerUrisService', () => {
       .build();
 
     const result = await service.createShortUri(mockCreateShortnerUris);
-    expect(result).rejects.not.toThrow;
+    expect(repository.save).rejects.not.toThrow;
+    expect(result).toHaveProperty('newUrl');
+    expect(result.newUrl).not.toBeNull();
   });
 });
