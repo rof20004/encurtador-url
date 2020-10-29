@@ -27,7 +27,7 @@ describe('ShortnerUrisController', () => {
         await app.init();
     });
 
-    it('expects to return 400 for create short uri because has not url is not defined or is empty', async () => {
+    it('expects to return 400 for create short uri because has no url or is not defined or is empty', async () => {
         await request(app.getHttpServer())
             .post('/api/v1/shortner-uris')
             .expect(400);
