@@ -2,13 +2,6 @@
 
 API Rest usada para criar urls encurtadas.
 
-# serviços
-
-| Serviço | Verbo HTTP | Descrição | Exemplo |
-| --- | --- | --- | --- |
-| /api/v1/shortner-uris | POST | Cadastra uma url encurtada a partir da url fornecida | { "url": "https://www.google.com.br" } |
-| /:shortUri | GET | Recebe a url encurtada e redireciona para a url original | http://localhost:3000/1j4324u989 |
-
 # servidores
 
 |Ambiente | Url  | Banco |
@@ -25,3 +18,20 @@ API Rest usada para criar urls encurtadas.
 * Node.js  
 * SQLite3
 * Swagger
+
+# como utilizar
+
+1. Clonar o projeto
+`git clone https://github.com/rof20004/api-criptografia.git`
+
+2. Instalar as dependências
+`yarn`
+
+3. Executar aplicação em desenvolvimento
+`yarn start:dev`
+
+4. Gerar build de produção
+`yarn build`
+
+5. Executar em modo de produção
+`yarn start:prod`
