@@ -22,7 +22,7 @@ API Rest usada para criar urls encurtadas.
 # como utilizar
 
 1. Clonar o projeto
-`git clone https://github.com/rof20004/api-criptografia.git`
+`git clone https://github.com/rof20004/encurtador-url.git`
 
 2. Instalar as dependências
 `yarn`
